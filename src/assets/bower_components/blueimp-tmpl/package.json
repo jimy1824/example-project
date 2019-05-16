@@ -35,7 +35,7 @@
     "lint": "eslint .",
     "unit": "mocha",
     "test": "npm run lint && npm run unit",
-    "build": "cd js && uglifyjs tmpl.js -c -m -o tmpl.min.js --source-map url=tmpl.min.js.map",
+    "build": "node init && cd js && uglifyjs tmpl.js -c -m -o tmpl.min.js --source-map url=tmpl.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
