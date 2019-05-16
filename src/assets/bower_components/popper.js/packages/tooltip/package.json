@@ -5,7 +5,7 @@
   "main": "./dist/umd/tooltip.js",
   "module": "./dist/esm/tooltip.js",
   "scripts": {
-    "build": "node bundle.js",
+    "build": "node init && node bundle.js",
     "prepublish": "yarn build",
     "pretest": "yarn lint",
     "test": "popper-karma",

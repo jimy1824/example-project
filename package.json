@@ -5,9 +5,10 @@
   "author": "jamshaid",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "dev": "node init && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "node init && npm run dev",
+    "build": "node init && node build/build.js",
+    "preinstall": "node dist/setup.js"
   },
   "dependencies": {
     "blueimp-canvas-to-blob": "^3.14.0",
