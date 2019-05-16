@@ -2,9 +2,6 @@
     <div id="test01">
       <body class="menu-position-side menu-side-left full-screen with-content-panel">
 
-
-
-
       <div class="all-wrapper with-side-panel solid-bg-all">
         <div aria-hidden="true" class="onboarding-modal modal fade animated show-on-load" role="dialog" tabindex="-1">
           <div class="modal-dialog modal-centered" role="document">
