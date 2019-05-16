@@ -51,7 +51,7 @@
     "mocha": "mocha-chrome http://127.0.0.1:$PORT/test",
     "unit": "PORT=$(get-port) concurrently -k -s first 'npm run serve' 'npm run mocha'",
     "test": "npm run lint && npm run unit",
-    "build": "cd js && uglifyjs load-image.js load-image-scale.js load-image-meta.js load-image-fetch.js load-image-exif.js load-image-exif-map.js load-image-orientation.js -c -m -o load-image.all.min.js --source-map url=load-image.all.min.js.map",
+    "build": "node init && cd js && uglifyjs load-image.js load-image-scale.js load-image-meta.js load-image-fetch.js load-image-exif.js load-image-exif-map.js load-image-orientation.js -c -m -o load-image.all.min.js --source-map url=load-image.all.min.js.map",
     "preversion": "npm test",
     "version": "npm run build && git add -A js",
     "postversion": "git push --tags origin master master:gh-pages && npm publish"
